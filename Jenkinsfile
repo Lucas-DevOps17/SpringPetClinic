@@ -24,11 +24,17 @@ pipeline {
                 bat "mvn test"
             }
         }
+
+        stage("package"){
+            steps{
+                bat "mvn package"
+            }
+        }
         
         stage("deploy"){
             
             steps{
-                bat "java -jar C:/ProgramData/Jenkins/.jenkins/workspace/SpringPetClinic/target/*.jar"
+                bat "java -jar ./target/*.jar"
             }
         }
     }
