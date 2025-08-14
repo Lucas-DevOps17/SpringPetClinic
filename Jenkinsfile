@@ -34,7 +34,7 @@ pipeline {
         stage("deploy"){
             
             steps{
-                bat "java -jar ./target/*.jar"
+                bat "java -jar C:/ProgramData/Jenkins/.jenkins/workspace/SpringPetClinic/target/*.jar"
             }
         }
     }
