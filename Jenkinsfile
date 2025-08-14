@@ -1,7 +1,7 @@
 pipeline {
     
     agent any
-    tools {maven "mavenV3"}
+    tools {maven "M3"}
     stages{
         
         stage("checkout"){
@@ -22,13 +22,6 @@ pipeline {
             
             steps{
                 sh "mvn test"
-            }
-        }
-        
-        stage("package"){
-            
-            steps{
-                sh "mvn package"
             }
         }
         
