@@ -14,21 +14,21 @@ pipeline {
         stage("build"){
             
             steps{
-                sh "mvn compile"
+                bat "mvn compile"
             }
         }
         
         stage("test"){
             
             steps{
-                sh "mvn test"
+                bat "mvn test"
             }
         }
         
         stage("deploy"){
             
             steps{
-                sh "java -jar /home/coder/.jenkins/workspace/PetClinicDeclarativePipeline/target/*.jar"
+                bat "java -jar C:\ProgramData\Jenkins\.jenkins\workspace\SpringPetClinic\target\*.jar"
             }
         }
     }
